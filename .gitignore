@@ -1,0 +1,11 @@
+cgi-bin
+etc
+homes
+logs
+scripts
+tmp
+.virtualmin-src
+*.sql
+*.tar.gz
+public_html/sites/*/settings*.php
+public_html/sites/default/files/*
