@@ -5676,7 +5676,7 @@
         "dist": {
             "type": "zip",
             "url": "https://ftp.drupal.org/files/projects/address-8.x-1.0.zip",
-            "reference": null,
+            "reference": "8.x-1.0",
             "shasum": "2be22f841f8e4af2ba23b6bc9983e013c167c520"
         },
         "require": {
@@ -5717,6 +5717,49 @@
         "homepage": "http://drupal.org/project/address",
         "support": {
             "source": "http://cgit.drupalcode.org/address"
+        }
+    },
+    {
+        "name": "drupal/backup_migrate",
+        "version": "dev-4.x",
+        "version_normalized": "dev-4.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/backup_migrate",
+            "reference": "99c76201a1c64b2ebdd4c3fbb28ec8f676734853"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-4.x": "4.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-4.0-alpha2+15-dev",
+                "datestamp": "1494043388"
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "dgorton",
+                "homepage": "https://www.drupal.org/user/19044"
+            },
+            {
+                "name": "ronan",
+                "homepage": "https://www.drupal.org/user/72815"
+            }
+        ],
+        "description": "Backup the Drupal database and files or migrate them to another environment.",
+        "homepage": "https://www.drupal.org/project/backup_migrate",
+        "support": {
+            "source": "http://cgit.drupalcode.org/backup_migrate"
         }
     }
 ]
