@@ -1,0 +1,30 @@
+.pager {
+  &__items {
+    padding-left: 0;
+  }
+  &__item {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0 2px;
+    a {
+      background-color: $color-pager-item-bg;
+      color: $color-pager-item-text;
+      padding: 7px 12px;
+      text-align: center;
+      transition: all 0.25s;
+      text-decoration: none;
+      display: block;
+      &:hover,
+      &.is-active {
+        background-color: $color-pager-item-bg-hover;
+        color: $color-pager-item-text-hover;
+      }
+    }
+    &--empty {
+      opacity: .3;
+    }
+  }
+  &__item--previous {}
+  &__item--next {}
+}

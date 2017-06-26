@@ -1,0 +1,16 @@
+$grid-size: 24 !default;
+$container: 1224px;
+
+$susy: (
+        flow: ltr,
+        math: fluid,
+        output: float,
+        gutter-position: after,
+        container: $container,
+        container-position: center,
+        columns: $grid-size,
+        gutters: 0.5,
+        box-sizing: border-box,
+        last-flow: to,
+        clearfix: true
+);

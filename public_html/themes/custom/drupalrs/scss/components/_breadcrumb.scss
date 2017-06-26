@@ -1,0 +1,29 @@
+.breadcrumb {
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    display: inline;
+    color: $color-text;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    &:before {
+      content: ' \BB ';
+    }
+    &:first-child:before {
+      content: none;
+    }
+    &:last-child {
+      a {
+        pointer-events: none;
+        cursor: default;
+        font-weight: bold;
+      }
+    }
+  }
+  &__item-link {
+    font-size: $size-breadcrumb;
+  }
+}

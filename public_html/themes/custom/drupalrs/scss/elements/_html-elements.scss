@@ -1,0 +1,113 @@
+//body font size
+body {
+  font-size: $size-mob-font;
+  @media #{$Normal}  {
+    font-size: $size-font;
+    }
+  color: $color-text;
+        font-family: $body-font;
+      }
+
+//== heading
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-title;
+  font-weight: bold;
+  font-family: $header-font;
+}
+
+h1 {
+  font-size: $size-mob-h1;
+  @media #{$Normal}  {
+    font-size: $size-h1;
+  }
+  margin: 50px 0 30px 0;
+}
+
+h2 {
+  font-size: $size-mob-h2;
+  @media #{$Normal}  {
+    font-size: $size-h2;
+  }
+  margin: 40px 0 20px 0;
+}
+
+h3 {
+  font-size: $size-mob-h3;
+  @media #{$Normal}  {
+    font-size: $size-h3;
+  }
+   margin: 30px 0 10px 0;
+}
+
+h4 {
+  font-size: $size-mob-h4;
+  @media #{$Normal}  {
+    font-size: $size-h4;
+  }
+  margin: 20px 0 5px 0;
+}
+
+h5 {
+  font-size: $size-mob-h5;
+  @media #{$Normal}  {
+    font-size: $size-h5;
+  }
+  margin: 15px 0;
+}
+
+h6 {
+  font-size: $size-mob-h6;
+  @media #{$Normal}  {
+    font-size: $size-h6;
+  }
+  margin: 10px 0;
+}
+
+//== links
+a,
+a:hover,
+a:visited,
+a:focus {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: $color-link;
+}
+
+a:hover,
+a:focus {
+  color: $color-link-hover;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+//== paragraph
+p {
+  margin: 0 0 15px 0;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
+//== lists
+ul {
+  list-style-position: inside;
+}
+
+ul, ol {
+  li {
+    line-height: 1.4em;
+  }
+}
+
+//== responsive img
+img {
+  max-width: 100%;
+  height: auto;
+}
