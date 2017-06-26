@@ -1,0 +1,26 @@
+//== fonts
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&subset=latin-ext';
+
+$roboto: 'Roboto', sans-serif;
+$body-font: $roboto;
+$header-font: $roboto;
+
+//== heading sizes
+
+$size-font: 14px;
+$size-h1: 25px;
+$size-h2: 20px;
+$size-h3: 18px;
+$size-h4: 16px;
+$size-h5: 14px;
+$size-h6: 12px;
+$size-breadcrumb: 13px;
+
+$size-mob-font: 13px;
+$size-mob-h1: 23px;
+$size-mob-h2: 18px;;
+$size-mob-h3: 16px;
+$size-mob-h4: 14px;
+$size-mob-h5: 12px;
+$size-mob-h6: 10px;
+$size-mob-breadcrumb: 12px;
