@@ -1,9 +1,15 @@
+input {
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+}
+
 //== form label
 %form-label {
   display: block;
-  margin-top: 15px;
-  font-weight: normal;
-  color: $color-form-label-text;
+  font-weight: 500;
+  margin: 15px 0 4px;
+  color: $color-text;
 }
 
 //== placeholder
@@ -26,12 +32,12 @@ select:-webkit-autofill {
   input,
   textarea,
   select {
-    color: $color-form-text;
-    border-color: $color-form-border;
-    background-color: $color-form-bg;
+    color: $color-text;
+    border-color: $color-ash;
+    background-color: white;
     border-radius: 0;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     width: 100%;
     max-width: 100%;
     padding: 0.35em 0.5em;
@@ -40,6 +46,7 @@ select:-webkit-autofill {
     box-sizing: border-box;
     box-shadow: none;
     transition: all 0.15s;
+    border-radius: 3px;
     &:focus {
       border-color: $color-form-border-hover;
       background-color: $color-form-bg-hover;
@@ -95,16 +102,35 @@ input.form-file {
 }
 
 //==fieldset
-fieldset {
+fieldset:not(.fieldgroup) {
   border-radius: 3px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $color-form-border;
-  .fieldset-legend {
-    display: block;
-    font-weight: normal;
-    margin-top: 15px;
-    margin-bottom: 5px;
+  border: 2px solid $color-ash;
+  padding: 24px;
+  margin: 24px 0;
+  width: 100%;
+  box-sizing: border-box;
+  legend {
+    .fieldset-legend {
+      display: block;
+      font-weight: 500;
+      padding: 0;
+      margin: 15px 10px 5px;
+    }
+  }
+  .form-type-checkbox {
+    margin-right: 10px;
+    label {
+      font-weight: 400 !important;
+    }
+  }
+  .fieldset-wrapper {
+    legend {
+      margin: 0 0 12px 0;
+      display: block;
+      .fieldset-legend {
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -154,11 +180,11 @@ fieldset {
 .form-type-checkbox {
   label {
     &:before {
-      border: 1px solid $color-checkbox;
+      border: 2px solid $color-ash;
       border-radius: 3px;
     }
     &:after {
-      background-color: $color-checkbox;
+      background-color: darken($color-ash, 10%);
       border-radius: 0;
     }
   }
@@ -235,20 +261,21 @@ fieldset {
 
 //== button
 %submit-button {
-  background-color: $color-form-submit-bg;
-  color: $color-form-submit-text;
-  border-color: $color-form-submit-border;
-  border-style: solid;
-  border-width: 1px;
+  background-color: $color-red;
+  color: white;
+  border: none;
   width: auto;
   padding: 10px 15px;
   margin: 5px 0;
   transition: all 0.25s;
   display: inline-block;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: $ubuntu;
+  font-weight: 500;
   &:hover,
   &:active {
-    color: $color-form-submit-text-hover;
-    background-color: $color-form-submit-bg-hover;
+    background-color: darken($color-red, 5%);
   }
 }
 
@@ -277,4 +304,25 @@ fieldset {
 //== Preview display:none
 [id^="edit-preview"] {
   display: none;
+}
+
+.user-register-form {
+  line-height: 22px;
+}
+
+.user-login-form {
+  .form-submit {
+    margin: 24px 0 0;
+  }
+}
+
+details {
+  margin-bottom: 24px;
+  summary {
+    background-color: $color-ash;
+    color: $color-text;
+    padding: 12px 24px;
+    border-radius: 3px;
+    font-weight: 700;
+  }
 }

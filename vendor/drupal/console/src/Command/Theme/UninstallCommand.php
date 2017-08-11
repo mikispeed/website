@@ -60,7 +60,12 @@ class UninstallCommand extends Command
         $this
             ->setName('theme:uninstall')
             ->setDescription($this->trans('commands.theme.uninstall.description'))
-            ->addArgument('theme', InputArgument::IS_ARRAY, $this->trans('commands.theme.uninstall.options.module'));
+            ->addArgument(
+                'theme',
+                InputArgument::IS_ARRAY,
+                $this->trans('commands.theme.uninstall.options.module')
+            )
+            ->setAliases(['thu']);
     }
 
     /**
@@ -93,7 +98,9 @@ class UninstallCommand extends Command
             while (true) {
                 $theme_name = $io->choiceNoList(
                     $this->trans('commands.theme.uninstall.questions.theme'),
-                    array_keys($theme_list)
+                    array_keys($theme_list),
+                    null,
+                    true
                 );
 
                 if (empty($theme_name)) {

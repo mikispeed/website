@@ -74,86 +74,89 @@
 #}
 
 <div id="page" class="{{ page_classes }}">
-    <header id="header" class="container container--header">
+  <header id="header">
+    <div class="container container--header">
       {% if page.branding %}
-          {{ page.branding }}
+        {{ page.branding }}
       {% endif %}
 
       {% if page.user_navigation %}
-          {{ page.user_navigation }}
+        {{ page.user_navigation }}
       {% endif %}
 
       {% if page.search %}
-          {{ page.search }}
+        {{ page.search }}
+        <div class="region region-search-mobile">
+          <a href="http://drupalrs.studiopresent.dev/search/node"></a>
+        </div>
       {% endif %}
 
       {% if page.highlighted_links %}
-          {{ page.highlighted_links }}
+        {{ page.highlighted_links }}
       {% endif %}
 
       {% if page.navigation %}
-          {{ page.navigation }}
+        {{ page.navigation }}
       {% endif %}
 
       {% if page.header %}
         {{ page.header }}
       {% endif %}
-    </header>
+    </div>
+  </header>
 
-    <main id="content" class="{{ region_classes.main }} container container--main">
-      {% if page.highlighted %}
-          {{ page.highlighted }}
+  <main id="content" class="{{ region_classes.main }} container container--main">
+    {% if page.highlighted %}
+      {{ page.highlighted }}
+    {% endif %}
+
+    {% if page.content %}
+      {{ page.content }}
+    {% endif %}
+
+    {% if page.postfix_first %}
+      {{ page.postfix_first }}
+    {% endif %}
+
+    {% if page.sidebar_first %}
+      {{ page.sidebar_first }}
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      {{ page.sidebar_second }}
+    {% endif %}
+  </main>
+
+  <section id="events">
+    {% if page.postfix_second %}
+      {{ page.postfix_second }}
+    {% endif %}
+  </section>
+
+  <footer id="footer">
+    <div role="contentinfo" class="{{ region_classes.footer }} container container--footer-top">
+      {% if page.footer_first %}
+        {{ page.footer_first }}
       {% endif %}
 
-      {% if page.content %}
-          {{ page.content }}
+      {% if page.footer_second %}
+        {{ page.footer_second }}
       {% endif %}
 
-      {% if page.sidebar_first %}
-          {{ page.sidebar_first }}
+      {% if page.footer_third %}
+        {{ page.footer_third }}
       {% endif %}
 
-      {% if page.sidebar_second %}
-          {{ page.sidebar_second }}
+      {% if page.footer_fourth %}
+        {{ page.footer_fourth }}
       {% endif %}
 
-      {% if page.postfix_first %}
-          {{ page.postfix_first }}
+    </div>
+
+    <div class="{{ region_classes.footer }}">
+      {% if page.footer_fifth %}
+        {{ page.footer_fifth }}
       {% endif %}
-
-      {% if page.postfix_second %}
-          {{ page.postfix_second }}
-      {% endif %}
-
-      {% if page.postfix_third %}
-          {{ page.postfix_third }}
-      {% endif %}
-    </main>
-
-    <footer id="footer">
-        <div role="contentinfo" class="{{ region_classes.footer }} container container--footer-top">
-            {% if page.footer_first %}
-                {{ page.footer_first }}
-            {% endif %}
-
-            {% if page.footer_second %}
-                {{ page.footer_second }}
-            {% endif %}
-
-            {% if page.footer_third %}
-                {{ page.footer_third }}
-            {% endif %}
-
-            {% if page.footer_fourth %}
-                {{ page.footer_fourth }}
-            {% endif %}
-
-        </div>
-
-        <div class="{{ region_classes.footer }} container container--footer-bottom">
-            {% if page.footer_fifth %}
-                {{ page.footer_fifth }}
-            {% endif %}
-        </div>
-    </footer>
+    </div>
+  </footer>
 </div>

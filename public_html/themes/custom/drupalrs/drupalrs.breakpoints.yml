@@ -7,6 +7,15 @@ drupalrs.default.all:
   status: true
   langcode: en
   group: drupalrs.default
+drupalrs.default.small:
+  label: Small
+  mediaQuery: 'all and (min-width: 480px)'
+  weight: 2
+  multipliers:
+    - 1x
+  status: true
+  langcode: en
+  group: drupalrs.default
 drupalrs.default.narrow:
   label: Narrow
   mediaQuery: 'all and (min-width: 768px)'

@@ -19,38 +19,40 @@
 //== other colors
 $color-yellow: #ffe600;
 $color-green: #01752B;
-$color-blue: #00f;
-$color-red: #f00;
+$color-blue: #2764ad;
+$color-red: #df0024;
+$color-sky: #e7f1f7;
+$color-ash: #ebebeb;
 
 //== $HTML
-$color-bg: #ffffff;
+$color-bg: $color-sky;
 
 //== text color
-$color-text: lighten(black, 30%);
+$color-text: lighten(black, 40%);
 
 //== h1-h6 color
-$color-title: black;
+$color-title: lighten(black, 20%);
 
 //== links
-$color-link: #333333;
-$color-link-hover: #000000;
+$color-link: $color-blue;
+$color-link-hover: darken($color-blue, 10%);
 
 //== mobile menu color
-$color-mobile-menu-bg: darken(white, 30%); /* mobile menu background color */
-$color-mobile-menu-text: #fff; /* link text color */
-$color-mobile-menu-text-hover: black; /* hover link text color */
-$color-mobile-menu-text-active: black; /* active link text color */
-$color-mobile-menu-text-active-bg: white; /* active link background color */
-$color-mobile-menu-hamburger: darken(white, 50%); /* 3 vertical line color */
+$color-mobile-menu-bg: $color-blue; /* mobile menu background color */
+$color-mobile-menu-text: rgba(white, 0.75); /* link text color */
+$color-mobile-menu-text-hover: white; /* hover link text color */
+$color-mobile-menu-text-active: white; /* active link text color */
+$color-mobile-menu-text-active-bg: darken($color-blue, 5%); /* active link background color */
+$color-mobile-menu-hamburger: $color-blue; /* 3 vertical line color */
 $color-mobile-menu-hamburger-bg: transparent;
 
 //== navigation
-$color-navigation-bg: darken(white, 10%); /* UL bg color */
-$color-navigation-link: #000; /* link text color */
-$color-navigation-link-hover: #333; /* hover link text color */
-$color-navigation-link-active: $color-navigation-link-hover; /*active link text color */
+$color-navigation-bg: white; /* UL bg color */
+$color-navigation-link: lighten(black, 40%); /* link text color */
+$color-navigation-link-hover: white; /* hover link text color */
+$color-navigation-link-active: transparent; /*active link text color */
 $color-navigation-link-bg: transparent; /* text background color */
-$color-navigation-link-bg-hover: darken(white, 15%); /* hover text background color */
+$color-navigation-link-bg-hover: $color-red; /* hover text background color */
 $color-navigation-link-bg-active: $color-navigation-link-bg-hover; /* active text background color */
 
 //== form

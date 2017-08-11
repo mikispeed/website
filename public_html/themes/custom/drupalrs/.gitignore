@@ -7,5 +7,8 @@
 /sass_imports/
 .remote-sync.json
 /dist
-/dev-css
 .idea
+/css/development.css
+/css/development.css.map
+/css/drupalrs.css.map
+/css/layout/default-layout.css.map

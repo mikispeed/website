@@ -11,24 +11,25 @@ not node.isPublished() ? drupalrs_block ~ '--unpublished',
 %}
 <article{{ attributes.addClass(classes) }}>
     {% block content %}
-        {{ title_prefix }}
-        {% if not page %}
-          <h2{{ title_attributes.addClass(drupalrs_block ~ '__title') }}>
-            <a class="{{ drupalrs_block }}__title-link" href="{{ url }}" rel="bookmark">{{ label }}</a>
-          </h2>
-        {% endif %}
-        {{ title_suffix }}
 
         {% if display_submitted %}
           <footer class="{{ drupalrs_block }}__meta">
             <div{{ author_attributes.addClass(drupalrs_block ~ '__submitted') }}>
                 {{ date }}
                 {{ metadata }}
+                {{ author_name }}
             </div>
           </footer>
         {% endif %}
 
       <div{{ content_attributes.addClass(drupalrs_block ~ '__content') }}>
+          {{ title_prefix }}
+          {% if not page %}
+              <h2{{ title_attributes.addClass(drupalrs_block ~ '__title') }}>
+                  <a class="{{ drupalrs_block }}__title-link" href="{{ url }}" rel="bookmark">{{ label }}</a>
+              </h2>
+          {% endif %}
+          {{ title_suffix }}
           {{ content|without('links') }}
       </div>
 
