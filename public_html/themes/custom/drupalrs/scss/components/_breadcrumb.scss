@@ -1,11 +1,16 @@
 .breadcrumb {
+  padding: 0 16px;
+  @media #{$Narrow} {
+    padding: 0;
+  }
   &__list {
-    margin: 0;
+    margin: 36px 0 0 0;
     padding: 0;
   }
   &__item {
     display: inline;
-    color: $color-text;
+    color: rgba($color-blue, 0.75);
+    font-size: 13px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -19,7 +24,7 @@
       a {
         pointer-events: none;
         cursor: default;
-        font-weight: bold;
+        font-weight: 500;
       }
     }
   }

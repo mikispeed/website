@@ -4,13 +4,14 @@
 }
 
 .block-drupalrs-main-menu {
+  $root: &;
   position: fixed;
   top: 0;
   bottom: 0;
   right: auto;
   left: 0;
-  width: 200px;
-  transform: translateX(-200px);
+  width: 250px;
+  transform: translateX(-250px);
   transition: all 0.25s;
   -webkit-overflow-scrolling: touch;
   z-index: 9999;
@@ -25,14 +26,23 @@
       display: block;
       list-style: none;
       padding-top: 0;
+      border-bottom: 2px solid rgba(white, 0.1);
+      #{$root}__menu {
+        #{$root}__menu-item {
+          border-bottom: 0;
+          #{$root}__menu-item-link {
+            font-weight: 400;
+          }
+        }
+      }
       &-link {
-        color: $color-mobile-menu-text;
+        color: $color-mobile-menu-text !important;
         display: block;
         text-align: left;
-        padding: 10px 5px;
+        padding: 12px;
+        font-weight: 700;
         &.is-active {
           color: $color-mobile-menu-text-active;
-          background-color: $color-mobile-menu-text-active-bg;
         }
         &:hover {
           text-decoration: none;
@@ -78,32 +88,32 @@
     text-transform: uppercase;
     font-size: 18px;
     text-decoration: none;
-    text-align: right;
     position: relative;
     color: $color-mobile-menu-hamburger;
   }
   &__line {
     background: $color-mobile-menu-hamburger;
-    height: 5px;
-    width: 30px;
+    height: 4px;
+    width: 24px;
     content: "";
     display: block;
     position: absolute;
-    right: 6px;
+    left: 12px;
     &--first {
       top: 0px;
     }
     &--second {
-      top: 10px;
+      top: 8px;
     }
     &--third {
-      top: 20px;
+      top: 16px;
     }
   }
 }
 
-@media #{$Normal} {
+@media #{$Narrow} {
   .block-drupalrs-main-menu {
+    text-align: right;
     position: inherit;
     top: auto;
     right: auto;
@@ -120,38 +130,79 @@
       box-sizing: border-box;
       &-item {
         display: inline-block;
-        &_link {
-          color: $color-navigation-link;
-          background-color: $color-navigation-link-bg;
-          &:hover {
-            color: $color-navigation-link-hover;
-            background-color: $color-navigation-link-bg-hover;
-          }
+        margin-left: 4px;
+        background-color: $color-navigation-link-bg;
+        border-radius: 3px;
+        border-bottom: 0;
+        &-link {
+          color: $color-navigation-link !important;
+          font-weight: 500;
+          padding: 8px 12px;
           &.is-active {
-            color: $color-navigation-link-active;
-            background-color: $color-navigation-link-bg-active;
+            color: $color-navigation-link;
+          }
+        }
+        &:hover {
+          background-color: $color-red;
+          .block-drupalrs-main-menu__menu-item-link {
+            color: white !important;
           }
         }
         &.block-drupalrs-main-menu__menu-item--expanded {
           position: relative;
+          border-radius: 3px 3px 0 0;
           .menu {
             display: none;
             z-index: 99;
+            padding: 0;
+            margin: 0;
+          }
+          > a {
+            &:after {
+              content: "";
+              margin-left: 4px;
+              display: inline-block;
+              vertical-align: middle;
+              width: 16px;
+              height: 10px;
+              background-image: url("../images/chevron-down.svg");
+              background-size: 16px 9px;
+              background-repeat: no-repeat;
+              background-position: top center;
+            }
+          }
+          &:hover {
+            a {
+              &:after {
+                background-image: url("../images/chevron-down-white.svg");
+              }
+            }
           }
         }
         &:hover {
           .menu {
             position: absolute;
             display: block;
+            padding: 4px 12px;
+            background-color: $color-red;
+            border-radius: 0 3px 3px 3px;
             li {
-              background-color: $color-navigation-bg;
-              width: 200px;
+              width: 175px;
               padding-left: 0;
+              margin-left: 0;
               a {
                 padding-left: 5px;
-                background-color: $color-navigation-bg;
+                color: rgba(white, 0.8) !important;
+                border-bottom: 1px solid rgba(white, 0.25);
+                font-size: 13px;
                 &:hover {
                   background-color: $color-navigation-link-bg-active;
+                  color: white !important;
+                }
+              }
+              &:last-of-type {
+                a {
+                  border-bottom: none;
                 }
               }
             }

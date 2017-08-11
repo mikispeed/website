@@ -9,12 +9,12 @@
             "role": ""
         }
     ],
-    "repositories": [
-        {
+    "repositories": {
+        "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
-    ],
+    },
     "require": {
         "composer/installers": "^1.2",
         "drupal-composer/drupal-scaffold": "^2.2",
@@ -38,7 +38,12 @@
         "drupal/metatag": "~1.0",
         "drupal/google_analytics": "~2.0",
         "drupal/xmlsitemap": "~1.0",
-        "drupal/backup_migrate": "4.x-dev"
+        "drupal/backup_migrate": "4.x-dev",
+        "drupal/twitter_block": "^2.1",
+        "drupal/field_group": "^1.0@RC",
+        "drupal/image_effects": "^1.0",
+        "drupal/address": "~1.0.0",
+        "drupal/colorbox": "^1.4"
     },
     "require-dev": {
         "drupal/devel": "~1.0"
@@ -54,7 +59,7 @@
         ]
     },
     "config": {
-      "secure-http": false
+        "secure-http": false
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
@@ -73,11 +78,21 @@
     },
     "extra": {
         "installer-paths": {
-            "public_html/core": ["type:drupal-core"],
-            "public_html/libraries/{$name}": ["type:drupal-library"],
-            "public_html/modules/contrib/{$name}": ["type:drupal-module"],
-            "public_html/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "public_html/themes/contrib/{$name}": ["type:drupal-theme"]
+            "public_html/core": [
+                "type:drupal-core"
+            ],
+            "public_html/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "public_html/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "public_html/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "public_html/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ]
         }
     }
 }
